@@ -1,0 +1,965 @@
+:root {
+  /* Колір для абзаців, лого, адреси */
+  --primary-text-color: rgba(67, 68, 85, 1);
+  /* Колір для навігації та заголовків h2*/
+  --title-text-color: rgba(46, 47, 66, 1);
+  /* акцент лого і кнопка, фон героя */
+  --accent-color: rgba(77, 90, 229, 1);
+  /* Головний фон сайту */
+  --background-color: rgba(255, 255, 255, 1);
+  /* Фон секції команди */
+  --background-color-teamcard: rgba(244, 244, 253, 1);
+  /* Колір Ховера для навігації */
+  --navigation-hover-color: rgba(64, 75, 191, 1);
+  /* Колір заголовку героя */
+  --color-title-hero: rgba(255, 255, 255, 1);
+  /* Колір тексту футера */
+  --color-footer-text: rgba(231, 233, 252, 1);
+  /* Колір фону головного героя */
+  --hero-background-color: rgba(46, 47, 66, 0.7);
+  /* Колір лого в футері */
+  --logo-footer-color: rgba(244, 244, 253, 1);
+  /* Фон для кнопок фільтра */
+  --bgbutton-portfolio: rgba(231, 233, 252, 1);
+  /* Колір обводки кнопок фільтра */
+  --border-button-color: #e7e9fc;
+  /* Колір тексту кнопки при ховері */
+  --color-button-portfolio: rgba(255, 255, 255, 1);
+  /* Властивість наведення курсора на посилання  */
+  --cursor-pointer: pointer;
+  --header-border-line-color: #e7e9fc;
+  --portfolio-border-line-color: #e7e9fc;
+  --team-card-bg-color: rgba(46, 47, 66, 0.08);
+  --team-card-bgcolor-two: rgba(46, 47, 66, 0.16);
+  --team-card-bgcolor-three: rgba(46, 47, 66, 0.08);
+  --bgcolor-icon-adventages: #f4f4fd;
+  --color-title-social-footer: rgba(255, 255, 255, 1);
+  --bgcolor-social-footer: rgba(255, 255, 255, 0.1);
+  --bgcolor-footer-social-hover: rgba(49, 208, 170, 1);
+  --bgcolor-icon-social-team: #4d5ae5;
+  --bgcolor-icon-social-team-hover: #404bbf;
+  --till-color-icon-customers: #8e8f99;
+  --till-color-icon-customers-hover: rgba(64, 75, 191, 1);
+  --shadow-bt-hero: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-portfolio-items: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  --bgcolor-underlibe-actheader: #404bbf;
+  --main-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --p-color-portfolio: #f4f4fd;
+  --bgcolor-modal: rgba(46, 47, 66, 0.4);
+  --modal-close-btn-color: #000000;
+  --modal-bgcolor: #fcfcfc;
+  --modal-closebtn-bgcolor: #e7e9fc;
+  --modal-closebtn-hover-color: rgba(255, 255, 255, 1);
+  --modal-form-checkbox-fill: rgba(64, 75, 191, 1);
+  --modal-form-checkbox-border: rgba(64, 75, 191, 1);
+  --modal-form-policy-icon-border-color: rgba(46, 47, 66, 1);
+}
+
+/* RESET STYLE */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+header {
+  border-bottom: 1px solid var(--header-border-line-color);
+}
+
+/* Властивості фону та основного тексту */
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  font-family: "Roboto", "Sans-serif";
+  letter-spacing: 0.02em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Знімаємо стилізацію спсику через додатковий клас list */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ховаєммо заголовок секції "наші переваги" */
+.advantages-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Властивості навігації та заголовків секцій */
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  padding: 0;
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: var(--title-text-color);
+}
+
+.container.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Анімація ховера та фокуса навігації */
+.link {
+  transition: color var(--main-animation);
+}
+
+/* Властивості ховера посилань навігації */
+.link:hover,
+.link:focus,
+.link.current {
+  color: var(--navigation-hover-color);
+}
+
+.navigation.list .link {
+  position: relative;
+}
+
+.link.current::after {
+  position: absolute;
+  bottom: -1px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--bgcolor-underlibe-actheader);
+  border-radius: 2px;
+}
+
+/* Властивості заголовків секцій */
+.title {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+/* Властивості навігації */
+.navigation.list .list {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.navigation.list {
+  display: flex;
+  margin-left: 76px;
+  gap: 40px;
+}
+
+.contact.list {
+  display: flex;
+}
+
+/* ВІдступ між контактами */
+.contact.list li + li {
+  margin-left: 40px;
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+/* Властивості Лого */
+.logo-link {
+  color: var(--title-text-color);
+  font-family: "Raleway", "Sans-serif";
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+/* Задаємо колір для контактів */
+.contact a {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact a:focus,
+.contact a:hover,
+.contact a:active {
+  color: var(--navigation-hover-color);
+}
+
+/* Спроба покрасити перші три букви лого в інший колір */
+.initial {
+  color: var(--accent-color);
+}
+
+/* Колір заголовку героя */
+.hero-title {
+  color: var(--color-title-hero);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-transform: capitalize;
+  width: 494px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 48px;
+}
+
+/* Задаємо колір та фон для кнопки головноно героя*/
+.button {
+  color: var(--color-title-hero);
+  background-color: var(--accent-color);
+  font-family: "Roboto", "Sans-serif";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: var(--cursor-pointer);
+  border-radius: 4px;
+  border: none;
+  padding: 16px 32px 16px 32px;
+  box-shadow: var(--shadow-bt-hero);
+
+  transition: background-color var(--main-animation),
+    box-shadow var(--main-animation);
+}
+
+/* Властивості наведення на кнопку героя */
+.button:hover,
+.button:active {
+  background-color: var(--navigation-hover-color);
+}
+
+/* Фон для секції головного героя */
+.hero.main {
+  background-color: black;
+  background-image: linear-gradient(
+      to right,
+      var(--hero-background-color),
+      var(--hero-background-color)
+    ),
+    url(../images/people-office.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  max-height: 600px;
+  max-width: 1440px;
+  padding: 188px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Задаємо  колір тексту для футера */
+.footer-text {
+  color: var(--color-footer-text);
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  width: 264px;
+  margin-top: 16px;
+}
+
+.footer {
+  background-color: var(--title-text-color);
+  padding: 100px 0px;
+}
+
+.logo-link-footer {
+  color: var(--logo-footer-color);
+  font-family: "Raleway", "Sans-serif";
+  letter-spacing: 0.03em;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-title-social-footer);
+  padding: 0px;
+  margin-bottom: 16px;
+}
+
+.social-footer {
+  margin-left: 120px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-link {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--bgcolor-social-footer);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+
+  transition: background var(--main-animation);
+}
+
+.footer-link:hover {
+  background: var(--bgcolor-footer-social-hover);
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.our-work {
+  display: flex;
+  gap: 24px;
+  /* justify-content: space-between; */
+}
+
+/* Задаємо фоновий колір для команди */
+.team-card {
+  background-color: var(--background-color);
+  box-shadow: 0px 1px 6px var(--team-card-bg-color),
+    0px 1px 1px var(--team-card-bgcolor-two),
+    0px 2px 1px var(--team-card-bgcolor-three);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.team-cards > .title {
+  margin-top: 32px;
+}
+
+.team {
+  background-color: var(--background-color-teamcard);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.social-team {
+  display: flex;
+  padding: 0px;
+  gap: 24px;
+  margin: auto;
+  margin-bottom: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-social-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--bgcolor-icon-social-team);
+  cursor: pointer;
+
+  transition: background var(--main-animation);
+}
+
+.icon-social-team:hover,
+.icon-social-team:focus {
+  background: var(--bgcolor-icon-social-team-hover);
+}
+
+/* Властивості абзаців секцій */
+.section-text {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  width: 264px;
+}
+
+.team-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.title.item {
+  margin-top: 32px;
+  text-align: center;
+}
+
+/*/* Властивості заголовку секції What are we doing*/
+.title-section {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  margin: 0;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+/* Властивосты заголовків секцій */
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  margin: 0;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+/* Властивості навігації  */
+.contact {
+  padding: 0;
+  margin: 0;
+}
+
+/* Прибиражмо підкреслення у посилань */
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-icon {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  fill: var(--till-color-icon-customers);
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+  transition: fill var(--main-animation), border var(--main-animation);
+}
+
+.customers-icon:hover {
+  fill: var(--till-color-icon-customers-hover);
+  border: 1px solid #404bbf;
+}
+
+/* Властивості для сторінки Portfolio */
+
+/* Властивості для фільтра */
+.filter-button {
+  color: var(--accent-color);
+  background: var(--bgbutton-portfolio);
+  border: 1px solid var(--border-button-color);
+  border-radius: 4px;
+  cursor: var(--cursor-pointer);
+  font-family: "Roboto", "Sans-serif";
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  padding: 12px 24px;
+  transition: color var(--main-animation),
+    background-color var(--main-animation), box-shadow var(--main-animation);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: transparent;
+  color: var(--color-button-portfolio);
+  background-color: var(--navigation-hover-color);
+}
+
+.product-thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.absolute-text {
+  background-color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translatey(100%);
+  transition: transform var(--main-animation);
+}
+
+.product-thumb:hover .absolute-text {
+  transform: translatex(0);
+}
+
+.thumb-text {
+  color: var(--p-color-portfolio);
+  padding: 40px 32px 164px 32px;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+}
+
+.portfolio-link {
+  transition: box-shadow var(--main-animation);
+  display: block;
+  position: relative;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: var(--shadow-portfolio-items);
+  display: inline-block;
+}
+
+/* Властивості заготовків секції портфоліо */
+.portfolio-title {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  margin-left: 16px;
+}
+
+/* Властивості абзаців секції портфоліо */
+.portfolio-text {
+  color: var(--primary-text-color);
+  line-height: 1.2;
+  margin: 0;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+/* Ховаємо заголовки сторінки портфоліо */
+.filter-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Властивосты блочноъ моделі */
+
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.work-example {
+  padding-bottom: 120px;
+}
+
+.advantages {
+  padding: 120px 0px;
+}
+
+.adventages-list {
+  display: flex;
+  gap: 24px;
+}
+
+.advantages-icon {
+  display: flex;
+  width: 264px;
+  height: 112px;
+  background: var(--bgcolor-icon-adventages);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-buttons {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.filter.list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  gap: 24px;
+  justify-content: center;
+}
+
+.portfolio.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: calc((100% - 48px) / 3);
+  margin-right: 24px;
+  margin-bottom: 48px;
+}
+
+.portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+}
+
+.portfolio-bottom {
+  border-bottom: 1px solid var(--portfolio-border-line-color);
+  border-left: 1px solid var(--portfolio-border-line-color);
+  border-right: 1px solid var(--portfolio-border-line-color);
+  padding: 32px 0px;
+}
+
+/* ============= MODAL ============= */
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bgcolor-modal);
+  scale: (0.9);
+  transition: opacity var(--main-animation), scale var(--main-animation);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: fill var(--main-animation);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  background: var(--modal-bgcolor);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 72px 24px 24px 24px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  margin-bottom: 14px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--title-text-color);
+}
+
+.modal-form-field input {
+  padding: 11px 16px 11px 38px;
+  margin: 0;
+  width: 100%;
+  background: #fcfcfc;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: var(--main-animation);
+}
+
+.modal-form-field textarea {
+  transition: var(--main-animation);
+}
+
+.modal-form-field label {
+  margin-bottom: 4px;
+}
+
+.modal-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.modal-form-field.textarea {
+  margin-bottom: 16px;
+}
+
+.modal-form input:hover,
+.modal-form input:focus,
+.modal-form input:hover + svg,
+.modal-form input:focus + svg,
+.modal-form textarea:hover,
+.modal-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.modal-form-input {
+  display: flex;
+  position: relative;
+}
+
+.modal-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0%, -50%);
+  pointer-events: none;
+  transition: var(--main-animation);
+}
+
+.modal-textarea {
+  resize: none;
+  width: 360px;
+  height: 120px;
+  padding: 8px 16px 8px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.04em;
+}
+
+.modal-form-btn {
+  color: var(--color-title-hero);
+  background-color: var(--accent-color);
+  font-family: "Roboto", "Sans-serif";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: var(--cursor-pointer);
+  border-radius: 4px;
+  border: none;
+  padding: 16px 32px;
+  box-shadow: var(--shadow-bt-hero);
+  min-width: 169px;
+  transition: background-color var(--main-animation),
+    box-shadow var(--main-animation);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:active {
+  background-color: var(--navigation-hover-color);
+}
+
+.modal-btn-field {
+  text-align: center;
+}
+
+.modal-form-field-checkbox {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.modal-form-label {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #8e8f99;
+}
+
+.modal-form-label:first-child {
+  letter-spacing: 0.04em;
+}
+
+.modal-form-label-checkbox {
+  display: flex;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+.modal-policy-text {
+  text-decoration: underline;
+  color: var(--accent-color);
+  margin-left: 3.5px;
+}
+
+.modal-form-policy-icon {
+  border: 1.25px solid var(--modal-form-policy-icon-border-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: border-color var(--main-animation);
+  fill: transparent;
+}
+
+.modal-form-input:checked + .modal-form-label-checkbox > svg {
+  fill: var(--modal-form-checkbox-fill);
+  border-color: var(--modal-form-checkbox-border);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--modal-closebtn-bgcolor);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background var(--main-animation);
+}
+
+.modal-btn-icon {
+  display: flex;
+  fill: var(--modal-close-btn-color);
+  transition: fill var(--main-animation);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:active {
+  background: var(--till-color-icon-customers-hover);
+}
+
+.modal-close-btn:hover .modal-btn-icon,
+.modal-close-btn:active .modal-btn-icon {
+  fill: var(--modal-closebtn-hover-color);
+}
+/* ============= MODAL ============= */
+
+.sub-footer {
+  margin-left: auto;
+}
+.sub-footer-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-title-social-footer);
+  padding: 0px;
+  margin-bottom: 16px;
+}
+.sub-footer-form {
+  display: flex;
+}
+
+.sub-btn-field {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.sub-btn-icon {
+  display: flex;
+  margin-left: 16px;
+}
+
+.sub-form-field-input {
+  display: flex;
+  width: 264px;
+  height: 40px;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  transition: drop-shadow var(--main-animation);
+}
+
+.sub-btn {
+  display: flex;
+  color: var(--color-title-hero);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
+  cursor: var(--cursor-pointer);
+  border-radius: 4px;
+  border: none;
+  padding: 8px 24px;
+  transition: background-color var(--main-animation);
+}
+
+.sub-btn:hover,
+.sub-btn:active {
+  background-color: var(--navigation-hover-color);
+}
