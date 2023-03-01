@@ -106,47 +106,6 @@ body {
   margin: 0;
 }
 
-.menu-hamburger {
-  stroke: var(--menu-open-hamburger-color);
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  line-height: 0;
-}
-
-.mobile-menu {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: white;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity var(--main-animation);
-}
-
-.mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.mobile-menu-navigation {
-  font-weight: 700;
-font-size: 36px;
-line-height: 0.9;
-display: flex;
-flex-direction: column;
-gap: 40px;
-}
-
-.mobile-menu-navigation .link {
-color: var(--title-text-color);
-}
-
 .modal-close-btn-menu {
   position: absolute;
   top: 24px;
@@ -161,13 +120,6 @@ color: var(--title-text-color);
   border-radius: 50%;
   cursor: pointer;
   transition: background var(--main-animation);
-}
-
-.mobile-menu-container {
-  width: 428px;
-  padding: 80px 35px 40px 40px;
-  margin: 0 auto;
-  position: relative;
 }
 
 /* Ховаєммо заголовок секції "наші переваги" */
@@ -243,11 +195,6 @@ color: var(--title-text-color);
   display: flex;
 }
 
-/* ВІдступ між контактами */
-.contact.list li + li {
-  margin-left: 40px;
-}
-
 .navigation.list {
   display: flex;
   margin-left: 76px;
@@ -268,13 +215,6 @@ color: var(--title-text-color);
   line-height: 1.33;
   text-transform: uppercase;
   align-items: center;
-}
-
-/* Задаємо колір для контактів */
-.contact a {
-  color: var(--primary-text-color);
-  font-size: 16px;
-  line-height: 1.5;
 }
 
 .contact a:focus,
@@ -1023,14 +963,95 @@ img {
 /* ============= MOBILE FIRST ============= */
 
 /* ============= HEADER ============= */
-@media screen and (max-width: 768px) {
-  .navigation.list {
-    display: none;
-  }
-
+@media screen and (max-width: 767px) {
+  .navigation.list,
   .contacts {
     display: none;
   }
+
+  .menu-hamburger {
+    stroke: var(--menu-open-hamburger-color);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--main-animation), visibility var(--main-animation);
+  }
+  
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .mobile-menu-navigation {
+    font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  }
+  
+  .mobile-menu-navigation .link {
+  color: var(--title-text-color);
+  }
+
+  .link:hover,
+.link:focus,
+.link.current {
+  color: var(--navigation-hover-color);
+}
+
+  .mobile-menu-container {
+    width: 428px;
+    height: 100%;
+    padding: 80px 35px 40px 40px;
+    margin: 0 auto;
+    position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  }
+  
+  .mobile-tel {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(40 / 36);
+    margin-bottom: 40px;
+  }
+  
+  .mobile-email > .link {
+    color: var(--primary-text-color);
+  }
+
+  .mobile-email {
+margin-bottom: 49px;
+  }
+
+  .social-team {
+    margin: 0;
+    display: flex;
+    padding: 0px;
+    gap: 56px;
+    align-items: center;
+    justify-content: start;
+  }
+
 }
 
 @media screen and (min-width: 480px) {
@@ -1050,9 +1071,9 @@ img {
 
 
 /* ============= TABLET ============= */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .container {
-  width: 582px;
+  width: 736px;
 }
 
 .link.current::after {
@@ -1065,8 +1086,25 @@ img {
   background: var(--bgcolor-underlibe-actheader);
   border-radius: 2px;
 }
+
+.menu-hamburger,
+.mobile-menu {
+  display: none;
 }
 
+.contact.list {
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Задаємо колір для контактів */
+.contact a {
+  color: var(--primary-text-color);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+}
+}
 
 /* ============= TABLET ============= */
 
@@ -1092,6 +1130,21 @@ img {
   border-radius: 2px;
 }
 
+.menu-hamburger {
+  display: none;
+}
+
+/* ВІдступ між контактами */
+.contact.list li + li {
+  margin-left: 40px;
+}
+
+/* Задаємо колір для контактів */
+.contact a {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
 }
 /* ============= DESKTOPE ============= */
 
