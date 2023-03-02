@@ -1147,7 +1147,7 @@ margin-bottom: 49px;
 }
 
 .contact.list {
-  flex-direction: inherit;
+  flex-direction: initial;
 }
 }
 /* ============= DESKTOPE ============= */
