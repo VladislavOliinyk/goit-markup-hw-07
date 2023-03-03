@@ -359,19 +359,16 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-cards {
-  display: flex;
-  gap: 24px;
-}
-
 .team-cards > .title {
   margin-top: 32px;
 }
 
 .team {
   background-color: var(--background-color-teamcard);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  width: auto;
+  margin: auto;
 }
 
 .social-team {
@@ -383,6 +380,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 
 .icon-social-team {
   display: flex;
@@ -1022,7 +1020,7 @@ img {
     margin-bottom: 49px;
   }
 
-  .social-team {
+  .social-team-mobile-menu {
     margin: 0;
     display: flex;
     padding: 0px;
@@ -1076,6 +1074,14 @@ img {
     flex-direction: column;
     row-gap: 72px;
   }
+
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 72px;
+  }
+  
 }
 
 @media screen and (min-width: 480px) {
@@ -1177,6 +1183,16 @@ column-gap: 24px;
   .advantages-list-item {
     max-width: 356px;
   }
+
+  .team-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
 }
 /* ============= TABLET ============= */
 
@@ -1282,5 +1298,14 @@ column-gap: 24px;
     display: block;
   }
 
+  .team-cards {
+    display: flex;
+    gap: 24px;
+  }
+
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
   }
 /* ============= DESKTOPE ============= */
