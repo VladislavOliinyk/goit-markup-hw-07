@@ -122,6 +122,10 @@ body {
   transition: background var(--main-animation);
 }
 
+.advantages-icon {
+  display: none;
+}
+
 /* Ховаєммо заголовок секції "наші переваги" */
 .advantages-title {
   position: absolute;
@@ -175,6 +179,16 @@ body {
   margin: 0;
   margin-bottom: 8px;
   margin-top: 8px;
+}
+
+.adventages-list-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .container.main-nav {
@@ -396,7 +410,7 @@ body {
   line-height: 1.5;
   padding: 0;
   margin: 0;
-  width: 264px;
+  width: 100%;
 }
 
 .team-text {
@@ -590,22 +604,7 @@ a {
 }
 
 .advantages {
-  padding: 120px 0px;
-}
-
-.adventages-list {
-  display: flex;
-  gap: 24px;
-}
-
-.advantages-icon {
-  display: flex;
-  width: 264px;
-  height: 112px;
-  background: var(--bgcolor-icon-adventages);
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center;
+  padding: 96px 0px;
 }
 
 .filter-buttons {
@@ -1040,7 +1039,7 @@ img {
         var(--hero-background-color),
         var(--hero-background-color)
       ),
-      url (../images/people-office-mobile1x.jpg);
+      url(../images/people-office-mobile1x.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1070,6 +1069,12 @@ img {
     width: 428px;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .adventages-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
   }
 }
 
@@ -1159,11 +1164,25 @@ img {
         url("../images/people-office-tablet@2x.jpg");
     }
   }
+
+  .adventages-list {
+    display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+row-gap: 72px;
+column-gap: 24px;
+
+  }
+
+  .advantages-list-item {
+    max-width: 356px;
+  }
 }
 /* ============= TABLET ============= */
 
 /* ============= DESKTOPE ============= */
 @media screen and (min-width: 1200px) {
+
   .container {
     width: 1158px;
     padding: 0 15px;
@@ -1228,5 +1247,36 @@ img {
         url("../images/people-office@2x.jpg");
     }
   }
-}
+
+  .advantages-icon {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    background: var(--bgcolor-icon-adventages);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .adventages-list {
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
+
+  .adventages-list-title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    text-align: start;
+  }
+
+  .advantages {
+    padding: 120px 0px;
+  }
+
+  }
 /* ============= DESKTOPE ============= */
