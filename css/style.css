@@ -367,8 +367,6 @@ body {
   background-color: var(--background-color-teamcard);
   padding-top: 96px;
   padding-bottom: 96px;
-  width: auto;
-  margin: auto;
 }
 
 .social-team {
@@ -458,14 +456,18 @@ a {
 }
 
 .customers {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .customers-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 16px;
+  align-items: center;
   justify-content: center;
-  gap: 24px;
 }
 
 .customers-icon {
@@ -1081,6 +1083,20 @@ img {
     align-items: center;
     row-gap: 72px;
   }
+
+  .customers-icon {
+    display: flex;
+    width: 190px;
+    height: 88px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    fill: var(--till-color-icon-customers);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  
+    transition: fill var(--main-animation), border var(--main-animation);
+  }
   
 }
 
@@ -1177,7 +1193,6 @@ flex-direction: row;
 flex-wrap: wrap;
 row-gap: 72px;
 column-gap: 24px;
-
   }
 
   .advantages-list-item {
@@ -1192,6 +1207,10 @@ column-gap: 24px;
     column-gap: 24px;
     align-items: center;
     justify-content: center;
+}
+
+.customers-list {
+  column-gap: 24px;
 }
 }
 /* ============= TABLET ============= */
@@ -1307,5 +1326,15 @@ column-gap: 24px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
+
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .customers-list {
+    gap: 24px;
+  }
+  
   }
 /* ============= DESKTOPE ============= */
