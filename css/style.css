@@ -120,7 +120,6 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: background var(--main-animation);
-  padding: 0;
 }
 
 .advantages-icon {
@@ -851,6 +850,7 @@ img {
   border-radius: 50%;
   cursor: pointer;
   transition: background var(--main-animation);
+  padding: 0;
 }
 
 .modal-btn-icon {
