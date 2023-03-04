@@ -120,6 +120,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: background var(--main-animation);
+  padding: 0;
 }
 
 .advantages-icon {
