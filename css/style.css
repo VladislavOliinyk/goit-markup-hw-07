@@ -209,7 +209,6 @@ body {
 }
 
 .navigation.list {
-  display: flex;
   margin-left: 76px;
   gap: 40px;
 }
@@ -376,7 +375,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 .icon-social-team {
   display: flex;
@@ -1058,7 +1056,7 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .adventages-list {
     display: flex;
     flex-direction: column;
@@ -1082,7 +1080,7 @@ img {
     cursor: pointer;
     justify-content: center;
     align-items: center;
-  
+
     transition: fill var(--main-animation), border var(--main-animation);
   }
 
@@ -1092,7 +1090,7 @@ img {
     justify-content: center;
     align-items: center;
   }
-  
+
   .social-footer {
     display: flex;
     flex-direction: column;
@@ -1169,15 +1167,9 @@ img {
 
   /* Колір заголовку героя */
   .hero-title {
-    color: var(--color-title-hero);
-    font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
-    text-transform: capitalize;
     width: 494px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 48px;
   }
 
   .hero.main {
@@ -1214,10 +1206,10 @@ img {
 
   .adventages-list {
     display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-row-gap: 72px;
-column-gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 
   .advantages-list-item {
@@ -1232,29 +1224,28 @@ column-gap: 24px;
     column-gap: 24px;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.customers-list {
-  column-gap: 24px;
-}
+  .customers-list {
+    column-gap: 24px;
+  }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-padding-left: 108px;
-  row-gap: 72px;
-  column-gap: 24px;
-}
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 108px;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
 
-.sub-btn-field {
-  margin-left: 24px;
-}
+  .sub-btn-field {
+    margin-left: 24px;
+  }
 }
 /* ============= TABLET ============= */
 
 /* ============= DESKTOPE ============= */
 @media screen and (min-width: 1200px) {
-
   .container {
     width: 1158px;
     padding: 0 15px;
@@ -1328,7 +1319,7 @@ padding-left: 108px;
     align-items: center;
     justify-content: center;
   }
-  
+
   .adventages-list {
     gap: 24px;
     flex-wrap: nowrap;
@@ -1380,14 +1371,13 @@ padding-left: 108px;
     margin-left: auto;
   }
 
-.sub-btn-field {
-  display: flex;
-  align-items: center;
-}
+  .sub-btn-field {
+    display: flex;
+    align-items: center;
+  }
 
-.footer {
-  padding: 100px 0px;
-}
-
+  .footer {
+    padding: 100px 0px;
+  }
 }
 /* ============= DESKTOPE ============= */
