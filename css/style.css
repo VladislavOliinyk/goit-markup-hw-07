@@ -1124,6 +1124,21 @@ img {
   .footer {
     padding: 96px 0px;
   }
+
+  /* Властивості для фільтра */
+.filter-button {
+  padding: 8px 16px;
+}
+
+.filter.list {
+  margin-left: 0;
+  margin-bottom: 48px;
+  row-gap: 16px;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 263px;
+  column-gap: 24px;
+}
 }
 
 @media screen and (min-width: 480px) {
