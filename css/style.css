@@ -291,7 +291,8 @@ body {
 
 .footer {
   background-color: var(--title-text-color);
-  padding: 100px 0px;
+  padding: 96px 0px;
+  min-width: min-content;
 }
 
 .logo-link-footer {
@@ -312,10 +313,6 @@ body {
   color: var(--color-title-social-footer);
   padding: 0px;
   margin-bottom: 16px;
-}
-
-.social-footer {
-  margin-left: 120px;
 }
 
 .footer-social-list {
@@ -367,6 +364,7 @@ body {
   background-color: var(--background-color-teamcard);
   padding-top: 96px;
   padding-bottom: 96px;
+  min-width: min-content;
 }
 
 .social-team {
@@ -873,9 +871,6 @@ img {
 }
 /* ============= MODAL ============= */
 
-.sub-footer {
-  margin-left: auto;
-}
 .sub-footer-title {
   font-weight: 500;
   font-size: 16px;
@@ -886,12 +881,6 @@ img {
 }
 .sub-footer-form {
   display: flex;
-}
-
-.sub-btn-field {
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
 }
 
 .sub-btn-icon {
@@ -1060,7 +1049,6 @@ img {
           var(--hero-background-color),
           var(--hero-background-color)
         ),
-        url("../images/people-office-mobile@2x.webp"),
         url("../images/people-office-mobile@2x.jpg");
     }
   }
@@ -1097,7 +1085,45 @@ img {
   
     transition: fill var(--main-animation), border var(--main-animation);
   }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   
+  .social-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sub-footer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sub-footer-title {
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .sub-form-field {
+    margin-bottom: 16px;
+  }
+
+  .footer {
+    padding: 96px 0px;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1182,7 +1208,6 @@ img {
           var(--hero-background-color),
           var(--hero-background-color)
         ),
-        url("../images/people-office-tablet@2x.webp"),
         url("../images/people-office-tablet@2x.jpg");
     }
   }
@@ -1211,6 +1236,18 @@ column-gap: 24px;
 
 .customers-list {
   column-gap: 24px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+padding-left: 108px;
+  row-gap: 72px;
+  column-gap: 24px;
+}
+
+.sub-btn-field {
+  margin-left: 24px;
 }
 }
 /* ============= TABLET ============= */
@@ -1278,7 +1315,6 @@ column-gap: 24px;
           var(--hero-background-color),
           var(--hero-background-color)
         ),
-        url("../images/people-office@2x.webp"),
         url("../images/people-office@2x.jpg");
     }
   }
@@ -1335,6 +1371,23 @@ column-gap: 24px;
   .customers-list {
     gap: 24px;
   }
-  
+
+  .social-footer {
+    margin-left: 120px;
   }
+
+  .sub-footer {
+    margin-left: auto;
+  }
+
+.sub-btn-field {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  padding: 100px 0px;
+}
+
+}
 /* ============= DESKTOPE ============= */
