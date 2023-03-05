@@ -520,7 +520,6 @@ a {
 }
 
 .container {
-  width: 428px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -983,7 +982,6 @@ img {
   }
 
   .mobile-menu-container {
-    width: 428px;
     height: 100%;
     padding: 80px 35px 40px 40px;
     margin: 0 auto;
@@ -1049,12 +1047,6 @@ img {
         ),
         url("../images/people-office-mobile@2x.jpg");
     }
-  }
-
-  .container-hero {
-    width: 428px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .adventages-list {
@@ -1143,7 +1135,22 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-hero {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile-menu-container {
+    width: 428px;
+  }
 }
 
 /* ============= MOBILE ============= */
@@ -1270,12 +1277,17 @@ img {
     margin-bottom: 64px;
   }
 
+  .container-hero {
+    width: 768px;
+  }
+
   @media screen and (min-width: 767px) and (max-width: 1200px) {
     .portfolio.list {
       justify-content: space-between;
       row-gap: 72px;
     }
   }
+  
 }
 /* ============= TABLET ============= */
 
@@ -1428,6 +1440,10 @@ img {
 
   .filter.list {
     margin-bottom: 72px;
+  }
+
+  .container-hero {
+    width: 100%;
   }
 }
 /* ============= DESKTOPE ============= */
