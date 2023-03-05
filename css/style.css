@@ -520,6 +520,7 @@ a {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1138,8 +1139,6 @@ img {
 @media screen and (min-width: 428px) {
   .container {
     width: 428px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .container-hero {
