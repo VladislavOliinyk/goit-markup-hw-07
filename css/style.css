@@ -1281,10 +1281,6 @@ img {
     margin-bottom: 64px;
   }
 
-  .container-hero {
-    width: 768px;
-  }
-
   @media screen and (min-width: 767px) and (max-width: 1200px) {
     .portfolio.list {
       justify-content: space-between;
@@ -1444,10 +1440,6 @@ img {
 
   .filter.list {
     margin-bottom: 72px;
-  }
-
-  .container-hero {
-    width: 100%;
   }
 }
 /* ============= DESKTOPE ============= */
