@@ -1142,7 +1142,6 @@ img {
   }
 
   .container-hero {
-    width: 428px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1150,6 +1149,12 @@ img {
   .mobile-menu-container {
     width: 428px;
   }
+}
+
+@media screen and (max-width: 428px) {
+.modal {
+  width: 100%;
+}
 }
 
 /* ============= MOBILE ============= */
