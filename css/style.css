@@ -1308,6 +1308,7 @@ img {
 
   .footer-container {
     display: flex;
+    column-gap: 0px;
   }
 
   .link.current::after {
