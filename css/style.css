@@ -1004,10 +1004,6 @@ img {
     color: var(--primary-text-color);
   }
 
-  .mobile-email {
-    margin-bottom: 49px;
-  }
-
   .social-team-mobile-menu {
     margin: 0;
     display: flex;
@@ -1132,6 +1128,10 @@ img {
   }
 
   .portfolio-item {
+    margin-bottom: 48px;
+  }
+
+  .mobile-address {
     margin-bottom: 48px;
   }
 }
