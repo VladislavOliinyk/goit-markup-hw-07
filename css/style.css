@@ -1290,6 +1290,10 @@ img {
     .contact.list {
       row-gap: 6px;
     }
+
+    .hero.main {
+      max-height: 436px;
+      }
   }
 }
 /* ============= TABLET ============= */
@@ -1444,5 +1448,10 @@ img {
   .filter.list {
     margin-bottom: 72px;
   }
+
+  .hero.main {
+max-width: 1440px;
+max-height: 600px;
+}
 }
 /* ============= DESKTOPE ============= */
